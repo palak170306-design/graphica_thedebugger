@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency History - AidMate</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+      background-color: #f5fff5; /* light greenish background */
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 220px;
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .sidebar h2 {
+      margin-bottom: 30px;
+      font-size: 20px;
+      color: #ecf0f1;
+    }
+
+    .sidebar a {
+      width: 100%;
+      padding: 12px 20px;
+      text-decoration: none;
+      color: white;
+      display: block;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #34495e;
+    }
+
+    /* Main content */
+    .main-content {
+      flex: 1;
+      padding: 20px;
+      background-color: #f5fff5;
+      overflow-y: auto;
+    }
+
+    .main-content h1 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #2c3e50;
+    }
+
+    /* History request cards */
+    .history-card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .history-card h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .history-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 8px 0;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .status {
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      color: white;
+      display: inline-block;
+    }
+    .status.resolved { background-color: #2ecc71; }  /* green */
+    .status.pending { background-color: #f1c40f; color: black; } /* yellow */
+    .status.fake { background-color: #e74c3c; }  /* red */
+  </style>
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>Dashboard</h2>
+    <a href="dashboard.html">Volunteer</a>
+    <a href="general_alert.html">Alerts</a>
+    <a href="history.html">History</a>
+    <a href="LOGIN.html" >Logout</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <h1>Emergency History</h1>
+
+    <!-- Sample History -->
+    <div class="history-card">
+      <h3>REQ-2024-010 <span class="status resolved">Resolved</span></h3>
+      <div class="history-row">
+        <span><strong>Type:</strong> Medical Emergency</span>
+        <span><strong>Time:</strong> Sept 10, 2025 - 2:30 PM</span>
+      </div>
+      <p><strong>Location:</strong> Zone A - Oak Street</p>
+    </div>
+
+    <div class="history-card">
+      <h3>REQ-2024-009 <span class="status fake">Fake</span></h3>
+      <div class="history-row">
+        <span><strong>Type:</strong> Fire Accident</span>
+        <span><strong>Time:</strong> Sept 8, 2025 - 4:15 PM</span>
+      </div>
+      <p><strong>Location:</strong> Zone B - River Road</p>
+    </div>
+
+    <div class="history-card">
+      <h3>REQ-2024-008 <span class="status pending">Pending</span></h3>
+      <div class="history-row">
+        <span><strong>Type:</strong> Flood Alert</span>
+        <span><strong>Time:</strong> Sept 7, 2025 - 6:45 AM</span>
+      </div>
+      <p><strong>Location:</strong> Zone C - Hilltop</p>
+    </div>
+  </div>
+</body>
+</html>

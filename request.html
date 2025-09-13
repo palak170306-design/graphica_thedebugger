@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request Status</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5fff5;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header */
+    .header {
+      background: #fefaf3;
+      padding: 12px 20px;
+      border-bottom: 1px solid #e5e5e5;
+      display: flex;
+      align-items: center;
+    }
+    .header h2 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+    }
+    .header h2 span {
+      margin-left: 8px;
+      font-size: 14px;
+      background: #eee;
+      padding: 3px 6px;
+      border-radius: 6px;
+      font-weight: normal;
+    }
+
+    /* Container */
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: #fffdf7;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      border: 1px solid #eee;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    /* Search Section */
+    .search-box {
+      display: flex;
+      gap: 10px;
+    }
+    .search-box input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    .search-box button {
+      background: #e67e22;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    /* Recent Requests */
+    .request {
+      background: #fff;
+      border: 1px solid #eee;
+      padding: 12px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .request .details {
+      font-size: 14px;
+    }
+    .status {
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: bold;
+      text-transform: capitalize;
+    }
+    .fulfilled {
+      background: #28a745;
+      color: white;
+    }
+    .in-progress {
+      background: #e67e22;
+      color: white;
+    }
+
+    /* Request Detail Section */
+    .request-detail {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+    .request-detail div {
+      flex: 1;
+      margin-right: 20px;
+    }
+    .request-detail p {
+      margin: 6px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <h2> Request Status</h2>
+  </div>
+
+  <!-- Content -->
+  <div class="container">
+    
+    <!-- Track Request -->
+    <div class="card">
+      <h3>Track Your Request</h3>
+      <div class="search-box">
+        <input type="text" placeholder="Enter request ID (e.g., REQ-2024-001)">
+        <button> Search</button>
+      </div>
+    </div>
+
+    <!-- Recent Requests -->
+    <div class="card">
+      <h3>Recent Requests</h3>
+
+      <div class="request">
+        <div class="details">
+          <strong>REQ-2024-001</strong><br>
+          Medical assistance needed at apartment complex
+        </div>
+        <span class="status fulfilled">fulfilled</span>
+      </div>
+
+      <div class="request">
+        <div class="details">
+          <strong>REQ-2024-002</strong><br>
+          Evacuation assistance for elderly residents
+        </div>
+        <span class="status in-progress">in-progress</span>
+      </div>
+    </div>
+
+    <!-- Request Details -->
+    <div class="card">
+      <strong>REQ-2024-001</strong>
+      <div class="request-detail">
+        <div>
+          <h4>Request Details</h4>
+          <p><strong>Type:</strong> Medical Emergency</p>
+          <p><strong>Title:</strong> Medical assistance needed at College</p>
+          <p> Location: AIT, Dighi, Pune</p>
+        </div>
+        <div>
+          <h4>Status Information</h4>
+          <p><strong>Submitted:</strong> 13/09/2025 9:30</p>
+          <p><strong>Last Update:</strong> 13/09/2025 11:30</p>
+          <p> Volunteers Assigned: 2</p>
+          <span class="status fulfilled">fulfilled</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+body {
+    background-color: #ffffff;
+    margin:0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.login{
+    max-width:500px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+    padding: 2rem;
+    flex: 1;
+    text-align:center;
+
+}
+
+input, select, button{
+    width:90%;
+    padding:10px;
+    margin:10px 0;
+    border-radius: 6px;
+    border: 1px solid ;
+}
+button{
+    font-size: 16px;
+    cursor: pointer;
+    transition: #35693e 0.3s ease;
+
+}
+button:hover{
+    background-color: #35693e
+
+}
+#message{
+    font-size:14px;
+    color:aquamarine;
+    margin-top:10px;
+}
+
+#register{
+    display:none;
+}
+
+#login-detail{
+    display:block;
+}
+.main{
+    text-align:center;
+    background-color: rgb(252, 252, 252);
+    
+    padding:32px 32px;
+    border-radius: 12px;
+    box-shadow: 0 4px 22px rgba(18, 18, 18, 0.08);
+}
+.opt{
+    
+    
+    margin:20px 0;
+    border :none;
+    transition: 0.2s;
+    background-color: #dcffdc;
+
+}
+.opt:hover{
+    background:#74e774;
+}
+.role{
+    margin:0 0 14px 0;
+    font-size:16px;
+
+}
+.select{
+    font-size: 20px;
+    font-weight: 200;
+}
+.name{
+    margin-bottom:20px;
+    display: flex;
+    text-align:flex-start;
+}
+.name h2{
+    width:80px;
+    height:80px;
+    font-family: "Ballet", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size:45px;
+    font-style: normal;
+    margin:0;
+}
+.logo-img{
+    text-align:center;
+    margin-bottom:20px;
+}
+.img{
+    width:50px;
+    height:50px;
+    object-fit: contain;
+}

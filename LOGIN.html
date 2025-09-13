@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AidMate- Login </title>
+        
+    <link rel="icon" type="image/png" href="logo.png">  
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="login">
+        <h2 class="title" id="login-title">Login</h2>
+        <form class="login-detail" id="login-detail">
+            <input type="email" id="login-email" placeholder="Email" required>
+            <input type="password" id="login-password" placeholder="Password" required>
+
+            <button type="submit" id="login-submit">Login</button>
+        </form>
+
+        <form class="login-detail" id="register" >
+            <input type="text" id="reg-name" placeholder="Full Name" required>
+            <input type="email" id="reg-email" placeholder="Email" required>
+            <input type="password" id="reg-password" placeholder="Password" required>
+            <input type="password" id="reg-confirm" placeholder="Confirm Password" required>
+            <input type="text" id="reg-location" placeholder="Location" required>
+            <button type="submit">Register</button>
+        </form>
+
+        <p class="sign-up" id="change">
+            Don't have an account? <a href="#" id="switch">Sign Up</a>
+        </p>
+        <p id="message"></p>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

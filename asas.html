@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Example</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+    }
+    .sidebar {
+      width: 220px;
+      height: 100vh;
+      background: #2c3e50;
+      color: white;
+      padding: 20px;
+      position: fixed;
+    }
+    .content {
+      margin-left: 240px;
+      padding: 20px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    canvas {
+      width: 100% !important;
+      height: 250px !important;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>My Dashboard</h2>
+    <p>Overview</p>
+    <p>Analytics</p>
+    <p>Reports</p>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content">
+    <h1>Dashboard Overview</h1>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Total Users</h3>
+        <p>1,245</p>
+      </div>
+      <div class="card">
+        <h3>Revenue</h3>
+        <p>$8,530</p>
+      </div>
+      <div class="card">
+        <h3>Active Sessions</h3>
+        <p>320</p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:20px;">
+      <h3>Sales Chart</h3>
+      <canvas id="salesChart"></canvas>
+    </div>
+  </div>
+
+  <script>
+    // Chart.js Example
+    const ctx = document.getElementById('salesChart');
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+        datasets: [{
+          label: 'Sales',
+          data: [120, 190, 300, 250, 400],
+          borderColor: 'blue',
+          backgroundColor: 'rgba(0, 0, 255, 0.1)',
+          fill: true
+        }]
+      }
+    });
+  </script>
+</body>
+</html>
